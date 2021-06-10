@@ -2,16 +2,14 @@
 using namespace std;
 
 
-int isPrimeNumber(int n) {
-  bool isPrime = true;
-
+bool isPrimeNumber(int n) {
    for(int i = 2; i <= n/2; i++) {
       if (n % i == 0) {
-         isPrime = false;
+         return true;
          break;
       }
    }
-   return isPrime;
+   return false;
 }
 
 void linearSearch(int q, int arr[]) {
@@ -32,7 +30,7 @@ int main() {
   bool isPrime;
   int q = 0;
   int index = 0;
-  int arr[25] = {0};
+  int arr[25];
 
 
   cout<<"Enter a number: "<< endl;
@@ -40,7 +38,7 @@ int main() {
 
   for(int n = 2; n < 100; n++) {
     isPrime = isPrimeNumber(n);
-     if (isPrime == true){
+     if (isPrime){
        arr[index] = n;
        index++;
     }
