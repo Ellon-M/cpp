@@ -1,5 +1,6 @@
 // Typecasting in C++ //
 
+
 // - making a variable of one type act like another type - for one single operation
 
 #include <iostream>
